@@ -1,0 +1,22 @@
+<div class="container">
+    <div *ngFor='let studre of studreq'>
+      
+      <div class="card">    
+        <h5 class="card-header" style="text-align: center;">{{ studre.title }}</h5>
+        <div class="row">
+        
+        <div class="col-md-12 col-sm-9 text-justify">
+        <div class="card-body">
+          <p class="card-text"> <b>Student Email : </b> {{ studre.studemail }}</p>
+          <p class="card-text"><b>Professor Email</b>  {{ studre.profemail }}</p>
+          <p class="card-text"><b>Course Status</b>  {{ studre.status }}</p>
+          <button class="btn btn-success" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="singlereq(studre)"style="margin-left: 10px;"> Approve/Reject</button>
+         
+        </div>
+      </div>
+        </div>
+      
+      </div>
+      <hr>
+    </div>
+    </div>

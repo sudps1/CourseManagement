@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+              <div class="registration-form">
+                <!-- (ngSubmit)="loginUser()"  -->
+                  <form method="POST" id="form" #userlogin="ngForm" (ngSubmit)="loginProf()">
+                      <div class="form-group">                        
+                          <h3><b>Welcome Professor</b></h3><h5>Please enter the credentials.</h5>
+                      </div>
+                      <br>
+
+
+                      
+                      <div class="form-group">
+                        <label>E-Mail</label>                   
+                        <input type="text" name="email" class="form-control item" [(ngModel)]="user.uname" 
+                        id="Mail" #email="ngModel" placeholder="E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        <label *ngIf="email.invalid && (email.dirty || email.touched) && email.errors.required" >
+                          <p style="color: red;">Email is required.</p>                             
+                        </label>
+                        <label *ngIf="email.invalid && email.errors.pattern" >
+                          <p style="color: red;">Enter a valid Email</p>               
+                        </label>
+                      </div>
+
+                      
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control item" [(ngModel)]="user.password" 
+                        id="password" #pass="ngModel" placeholder="Enter Password" required minlength="8">
+                        <label *ngIf="pass.invalid && (pass.dirty || pass.touched) && pass.errors.required" >
+                          <p style="color: red;">Password is required.</p>                             
+                        </label>
+
+                        <label *ngIf="pass.invalid && pass.errors.minlength" >
+                          <p style="color: red;">Password must be at least 8 characters long.</p>               
+                        </label>
+                      </div>
+                     
+                      <div class="form-group">
+                          <button type="submit" [disabled]="userlogin.form.invalid" class="btn btn-block create-account" id="loginBtn">Login</button>
+                      </div>
+                  </form>
+              </div>
+            
+            
+            
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+          

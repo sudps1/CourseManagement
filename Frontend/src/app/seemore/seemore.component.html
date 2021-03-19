@@ -1,0 +1,64 @@
+
+    <div class="container">
+    
+      
+        <div class="card">    
+          <h5 class="card-header"><b>Course Details : </b> </h5>
+          <div class="row">
+          <div class="col-md-2 col-sm-3 text-center">
+            <img class="card-img-top" [src] = 'course.url' style="width:100px;height:100px" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text"><b>Course Title :</b>  {{ course.title }}</p>
+            <p class="card-text"><b>Course Fee :</b>  {{ course.fee }}</p>
+            <p class="card-text"><b>Course is intended for :</b>  {{ course.intended }}</p>            
+            <p class="card-text"><b>Course Description : </b>{{ course.description }}</p>
+            <!-- <p class="card-text"><b>Food Name : </b>{{ FoodDetails.foodname }}</p>
+            <p class="card-text"><b>Food Name : </b>{{ FoodDetails.foodname }}</p>
+            <p class="card-text"><b>Food Name : </b>{{ FoodDetails.foodname }}</p> -->
+  
+            <!-- <button class="btn btn-primary" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="takeOrder(order)" > Take Order</button> -->
+            <!-- <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="deleteChef(chef)"style="margin-left: 10px;"> Delete</button> -->
+            
+  
+  
+            
+          </div>
+          </div>
+          
+        
+        </div>
+        <div class="card">    
+          <h5 class="card-header"> <b>Professor Details :</b> </h5>
+          <div class="row">
+          <div class="col-md-2 col-sm-3 text-center">
+            <img alt=""  src="assets/images/teacher.jpg" style="width:100px;height:100px" class="rounded-circle"  >
+            <!-- <a class="story-title" href="#"><img alt="" [src] = 'book.imageUrl' style="width:100px;height:100px" class="img-circle"></a> -->
+          </div>
+          <div class="col-md-10 col-sm-9 text-justify">
+          <div class="card-body">
+            <p class="card-text"><b>Professor Name:</b>  {{ profs.fullname }}</p>
+            <p class="card-text"><b>Qualifications :</b>  {{ profs.qualifications }}</p>
+            <p class="card-text"><b>Experiences:</b>  {{ profs.experiences }}</p>
+            <p class="card-text"><b>Mobile No. : </b>  {{ profs.mobno }}</p>
+            <p class="card-text"><b>E-mail : </b>  {{ profs.email }}</p>
+
+            <!-- <button class="btn btn-primary" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="editFood(food)" > Edit</button>
+            <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="deleteFood(food)"style="margin-left: 10px;"> Delete</button>
+       -->
+            
+          </div>
+        </div>
+          </div>
+        
+        </div>
+        <div class="card">
+            <button type="submit" (click)="studrequest()"  class="btn btn-block create-account">Request Subscription</button>
+
+        </div>    
+
+        
+        <hr>
+      
+      </div>
+      

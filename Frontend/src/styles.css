@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+    /* min-height:199px;
+    background-image: url(assets/images/img9.jpg) !important; */
+    background-image: url(assets/images/bg.jpg) !important;
+    /* background-color:#0b1410af; */
+    /* color:#aaaacc; */
+}

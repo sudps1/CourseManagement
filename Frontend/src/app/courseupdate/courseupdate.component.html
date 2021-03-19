@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+              <div class="registration-form">
+                <!-- (ngSubmit)="loginUser()" -->
+                  <form method="POST" id="form" #activityform="ngForm" (ngSubmit)="Activities()"  >
+                      <div class="form-group">                        
+                          <h3><b>Welcome Professor</b></h3><h5>Enter todays course activities</h5>
+                      </div>
+                      <br>
+
+
+                      
+                      <div class="form-group">
+                        <label>Describe Todays Course Activities </label> 
+                        <textarea class="form-control item" name="activities" aria-label="With textarea" [(ngModel)]="coursework.activities"
+                        #activities="ngModel" placeholder="Detail activities" required></textarea>
+    
+                        <!-- <input type="text" name="username"  class="form-control item" [(ngModel)]="UserDetail.username" 
+                        id="UserName" #username="ngModel" placeholder="Enter Your Highest Qualification" required> -->
+                        <label *ngIf="activities.invalid && (activities.dirty || activities.touched) && activities.errors.required" >
+                          <p style="color: red;">Please provide todays course activities</p>                             
+                        </label>
+                        
+                      </div>
+                      <div class="form-group">
+                        <label>Learning URL1 Discription</label>                    
+                        <input type="text" name="url1discrip"  class="form-control item" [(ngModel)]="coursework.url1discrip" 
+                         #url1discrip="ngModel" placeholder="Enter Your URL1 Discription" required>
+                        <label *ngIf="url1discrip.invalid && (url1discrip.dirty || url1discrip.touched) && url1discrip.errors.required" >
+                          <p style="color: red;">Please provide Your URL1 Discription</p>                             
+                        </label>
+                        
+                      </div>
+
+                      
+                      <div class="form-group">
+                        <label>Paste URL1</label>
+                        <input type="text" name="url1"  class="form-control item" [(ngModel)]="coursework.url1" 
+                           id="url" #url1="ngModel" placeholder="Paste an URL1" required>
+                        <label *ngIf="url1.invalid && (url1.dirty || url1.touched) && url1.errors.required" >
+                        <p style="color: red;">Learning URL1 is required</p>                             
+                        </label>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Learning URL2 Discription</label>                    
+                        <input type="text" name="url2discrip"  class="form-control item" [(ngModel)]="coursework.url2discrip" 
+                         #url2discrip="ngModel" placeholder="Enter Your URL2 Discription">
+                       
+                        
+                      </div>
+
+                      
+                      <div class="form-group">
+                        <label>Paste URL2</label>
+                        <input type="text" name="url2"  class="form-control item" [(ngModel)]="coursework.url2" 
+                           id="url" #url2="ngModel" placeholder="Paste an URL1">
+                        
+                      </div>
+
+                      <div class="form-group">
+                        <label>Learning URL3 Discription</label>                    
+                        <input type="text" name="url3discrip"  class="form-control item" [(ngModel)]="coursework.url3discrip" 
+                         #url3discrip="ngModel" placeholder="Enter Your URL3 Discription">
+                       
+                        
+                      </div>
+
+                      
+                      <div class="form-group">
+                        <label>Paste URL3</label>
+                        <input type="text" name="url3"  class="form-control item" [(ngModel)]="coursework.url3" 
+                           id="url" #url3="ngModel" placeholder="Paste an URL3">
+                        
+                      </div>  
+
+                      <div class="form-group">
+                          <button type="submit" [disabled]="activityform.form.invalid" class="btn btn-block create-account" id="loginBtn">Add Activity</button>
+                      </div>
+                  </form>
+              </div>
+            
+            
+            
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+          

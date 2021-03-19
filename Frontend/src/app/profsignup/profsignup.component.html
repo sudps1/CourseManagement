@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+              <div class="registration-form">
+                <!-- (ngSubmit)="AddUser()" -->
+              <form class="login" method="POST" #userdetail="ngForm" action = "/signup" (ngSubmit)="AddProf()" >
+                  <div class="form-group">
+                    <h5>Please fill this form to create an account<br> for Professors.</h5>
+                  </div>
+                 <br>
+
+
+                    <div class="form-group">
+                      <label>Professor's Full Name</label>
+                      <input type="text" name="fname"  class="form-control item" [(ngModel)]="UserDetail.firstname" 
+                         id="FirstName" #fname="ngModel" placeholder="Enter full name" required>
+                      <label *ngIf="fname.invalid && (fname.dirty || fname.touched) && fname.errors.required" >
+                      <p style="color: red;">Name is required</p>                             
+                      </label>
+                    </div>               
+                 
+
+
+                  <div class="form-group">
+                    <label>Qualifications</label>                    
+                    <input type="text" name="username"  class="form-control item" [(ngModel)]="UserDetail.username" 
+                    id="UserName" #username="ngModel" placeholder="Enter Your Qualifications" required>
+                    <label *ngIf="username.invalid && (username.dirty || username.touched) && username.errors.required" >
+                      <p style="color: red;">Please provide the Qualifications</p>                             
+                    </label>
+                    
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Experience</label> 
+                    <textarea class="form-control item" name="experience" aria-label="With textarea" [(ngModel)]="UserDetail.experience"
+                    #experience="ngModel" placeholder="Detail your experiences" required></textarea>
+
+                    <!-- <input type="text" name="username"  class="form-control item" [(ngModel)]="UserDetail.username" 
+                    id="UserName" #username="ngModel" placeholder="Enter Your Highest Qualification" required> -->
+                    <label *ngIf="experience.invalid && (experience.dirty || experience.touched) && experience.errors.required" >
+                      <p style="color: red;">Please provide your experience details</p>                             
+                    </label>
+                    
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>E-Mail</label>                   
+                    <input type="text" name="email" class="form-control item" [(ngModel)]="UserDetail.email" 
+                    id="Mail" #email="ngModel" placeholder="E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    <label *ngIf="email.invalid && (email.dirty || email.touched) && email.errors.required" >
+                      <p style="color: red;">Email is required.</p>                             
+                    </label>
+                    <label *ngIf="email.invalid && email.errors.pattern" >
+                      <p style="color: red;">Enter a valid Email</p>               
+                    </label>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Mobile Number</label>          
+                    <input type="text" name="mno" class="form-control item" [(ngModel)]="UserDetail.mobno" 
+                    id="Mobile" #mobnum="ngModel" placeholder="Enter 10 digit mobile number " pattern="^((\\+91-?)|0)?[0-9]{10}$" required>
+                    <label *ngIf="mobnum.invalid && (mobnum.dirty || mobnum.touched) && mobnum.errors.required" >
+                      <p style="color: red;"p>Mobile number is required.</p>                             
+                    </label>
+                    <label *ngIf="mobnum.invalid && mobnum.errors.pattern" >
+                      <p style="color: red;">Enter a valid Mobile number</p>               
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="birthdate">Date of Birth</label><br>
+                    <input max="2005-04-01" type="date" name="birthdate" [(ngModel)]="UserDetail.dob" #dob="ngModel" id="birthdate" required>
+                    <label *ngIf="dob.invalid && (dob.dirty || dob.touched) && dob.errors.required" >
+                        <p style="color: red;"p>Date of birth is required.</p>                             
+                      </label>
+                  </div>
+
+                    <div class="form-group">
+                      <label>Create a Password</label>      
+                    <input type="password" name="password"  class="form-control item" [(ngModel)]="UserDetail.password"
+                    id="password" #psw="ngModel" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required >
+                    <label *ngIf="psw.invalid && (psw.dirty || psw.touched) && psw.errors.required" >
+                      <p style="color: red;">Password is required.</p>                             
+                    </label>
+                    <label *ngIf="psw.invalid && psw.errors.pattern" >
+                      <p style="color: red;">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>               
+                    </label>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Confirm Password</label>      
+                  <input type="password" name="confirmpassword"  class="form-control item" [(ngModel)]="UserDetail.confirmpassword"
+                  id="password" #confirmpassword="ngModel" placeholder="Re-Enter password" pattern="{{ psw.value }}" required >
+                  <label *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched) && confirmpassword.errors.required" >
+                    <p style="color: red;">Confirm Password</p>                             
+                  </label>
+                  <label *ngIf="confirmpassword.invalid && confirmpassword.errors.pattern" >
+                    <p style="color: red;">Passwords not matching</p>               
+                  </label>
+                </div>
+
+
+                 
+                
+                  
+                         
+                      
+                  <div class="form-group"> 
+                      <div class="botton">
+                          <button type="submit" [disabled]="userdetail.form.invalid" class="btn btn-block create-account" id="loginBtn">Create Account</button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            
+            
+            
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>

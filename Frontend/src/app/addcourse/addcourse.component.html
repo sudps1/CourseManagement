@@ -1,0 +1,33 @@
+<div style=" margin-left: 32%;margin-top: 30px;">
+    <input type="button" class="btn btn-primary" style="width: 50%;"  *ngIf="_auth.loggedIn()" 
+    (click)="loggedUser()" value="Add Course" id="loginBtn"  />
+    </div>
+    <div class="container">
+        <div *ngFor='let coursedetail of coursedetails'>
+          
+          <div class="card">    
+            <h5 class="card-header">{{ coursedetail.title }}</h5>
+            <div class="row">
+            <div class="col-md-2 col-sm-3 text-center">
+              <img alt=""  [src] = 'coursedetail.url' style="width:100px;height:100px" class="rounded-circle"  >
+              <!-- <a class="story-title" href="#"><img alt="" [src] = 'book.imageUrl' style="width:100px;height:100px" class="img-circle"></a> -->
+            </div>
+            <div class="col-md-10 col-sm-9 text-justify">
+            <div class="card-body">
+              <p class="card-text"><b>Course Fee :</b>  {{ coursedetail.fee }}</p>
+              <p class="card-text"><b>Course is Intended For :</b>  {{ coursedetail.intended }}</p>
+              <p class="card-text"><b>Course Description : </b>  {{ coursedetail.description }}</p>
+              <!-- <p class="card-text"><b>Professor E-mail : </b>  {{ coursedetail.profemail }}</p> -->
+
+              <button class="btn btn-primary" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="addmaterial(coursedetail)" > Add Course Material</button>
+              <!-- <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="deleteFood(food)"style="margin-left: 10px;"> Delete</button> -->
+        
+              
+            </div>
+          </div>
+            </div>
+          
+          </div>
+          <hr>
+        </div>
+        </div>

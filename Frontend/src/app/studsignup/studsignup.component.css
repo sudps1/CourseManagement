@@ -1,0 +1,125 @@
+.login{
+    border: 2px solid white;
+    border-radius: 25px;
+    /* margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%; */
+    margin: auto;
+    width: 600px;
+    /* height: 550px; */
+    /* color: black; */
+    background-color: rgba(8, 7, 7, 0.7);     
+  
+  }
+   
+  h1,h2,h3,.highlight,.navbar a,#masthead h4 {
+    font-family:'Oswald',arial narrow,sans-serif;
+  }
+  .top-spacer {
+    background-color:#ffffff;
+    height:40px;
+  }
+  #masthead h1 {
+    font-size: 80px;
+    line-height: 1;
+    color:#fefeff;
+    margin-top:50px;
+  }
+  
+  .label{
+    float: left;
+    margin-left: 12%;
+    margin-top: 15px;
+    border-radius: 25px;
+    
+  }
+  /* .botton{
+    position: absolute;
+    top:90%;
+    left: 47.5%;
+  } */
+  .head{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  
+  .showBtn{
+    
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+  }
+  #passreq{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: blue;
+    /* display: none;
+    user-select: none; */
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-left: 30%;
+    padding-right: 30%;
+  
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }      
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .einstein{
+      margin: auto;
+  }
+  .registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+  }
+  .registration-form form{
+    background-color: rgb(255, 255, 255,.8);
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 20px 10px rgba(0, 0, 0,);
+  }
+  #masthead .well {
+    margin-top:31px;
+    background-color: rgb(255, 255, 255,0);
+    border: none;
+    min-height:127px;
+  }
+  .container{
+      margin-top: 40px;
+      margin-bottom: 80px;
+  }

@@ -1,0 +1,31 @@
+<div class="container">
+    <div *ngFor='let courseactiviti of courseactivities'>
+      
+      <div class="card">    
+        <h5 class="card-header" style="text-align: center;">Course Title: {{ courseactiviti.title }}</h5>
+        <div class="row">
+        
+        <div class="col-md-12 col-sm-9 text-justify">
+        <div class="card-body">
+            <!-- style="text-align: right;" -->
+          <p class="card-text" ><b>Date:  {{ courseactiviti.date }}</b></p>
+
+          <p class="card-text"> <b>Today's Course Activities : </b> <br>{{ courseactiviti.activities }}</p>
+          <p class="card-text"><b>{{ courseactiviti.url1discrip }}</b></p>
+          
+          <p class="card-text"><b>Link : </b> <a href="{{ courseactiviti.url1 }}" target="_blank">{{ courseactiviti.url1 }}</a></p>
+          <p class="card-text"><b> {{ courseactiviti.url2discrip }}</b> </p>
+          <p class="card-text"><b>Link : </b> <a href="{{ courseactiviti.url2 }}" target="_blank">{{ courseactiviti.url2 }}</a></p>
+          <p class="card-text"><b>  {{ courseactiviti.url3discrip }}</b></p>
+          <p class="card-text"><b>Link : </b> <a href="{{ courseactiviti.url3 }}" target="_blank">{{ courseactiviti.url3 }}</a></p>
+          <p class="card-text" style="text-align: right;"><b>For any query contact me at : </b>  {{ courseactiviti.profemail }}</p>
+
+
+        </div>
+      </div>
+        </div>
+      
+      </div>
+      <hr>
+    </div>
+    </div>

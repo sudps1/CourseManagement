@@ -1,0 +1,71 @@
+h1{
+    color: red;
+}.registration-form form{
+    background-color: rgb(255, 255, 255,.8);
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 20px 10px rgba(0, 0, 0,);
+  }
+  
+  
+  
+  h1,h2,h3,.highlight,.navbar a,#masthead h4 {
+    font-family:'Oswald',arial narrow,sans-serif;
+  }
+  
+  #masthead h1 {
+    font-size: 80px;
+    line-height: 1;
+    color:#fefeff;
+    margin-top:50px;
+  }
+  .top-spacer {
+    background-color:#ffffff;
+    height:40px;
+  }
+  
+  #masthead .well {
+    margin-top:31px;
+    background-color: rgb(255, 255, 255,0);
+    border: none;
+    min-height:127px;
+  }
+  
+  #topPanel {
+    padding-top:0px;
+    padding-left:22px;
+    padding-right:22px;
+  }
+  #topPanel .panel-body {
+    padding-top:0px;
+  }
+  @media screen and (min-width: 768px) {
+    #masthead h1 {
+      font-size: 80px;
+    }
+  }
+  .showBtn{
+    
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+  }
+  .registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+  }
+  .container{
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
